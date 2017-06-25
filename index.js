@@ -1,37 +1,4 @@
-var GET_FACT_MSG_EN = [
-    "Here's your fact: "
-    ,"This is your fact: "
-    ,"Did you know this? "
-    ,"What about this? "
-    ,"I bet this is new to you: " 
-]
-var GET_REPROMPT_MESSAGE_EN = [
-    "Why don't you ask me for a fact of another year? ",
-    "Tell me which year do you want a fact from.",
-    "If you want another fact, please tell me so.",
-    "Feel free to ask for more facts.",
-    "I'll be waiting in case you want to know more facts."
-]
-// Test hooks - do not remove!
-exports.GetFactMsg = GET_FACT_MSG_EN;
-var APP_ID_TEST = "mochatest";  // used for mocha tests to prevent warning
-
-
-exports.handler = function (event, context, callback) {
-    var alexa = Alexa.handler(event, context);
-    alexa.APP_ID = APP_ID;
-    // set a test appId if running the mocha local tests
-    if (event.session.application.applicationId == "mochatest") {
-        alexa.appId = APP_ID_TEST
-    }
-    // To enable string internationalization (i18n) features, set a resources object.
-    alexa.resources = languageStrings;
-    alexa.registerHandlers(handlers);
-    alexa.execute();
-};
-
-
-var handlers = {
+const handlers = {
     'LaunchRequest': function () {
         this.emit('GetFact');
     },
@@ -39,18 +6,17 @@ var handlers = {
         this.emit('GetFact');
     },
     'GetFact': function () {
-        // Get a random fact from the facts list
+        // Get a random space fact from the space facts list
         // Use this.t() to get corresponding language data
-        var factArr = this.t('FACTS');
-        var randomFact = randomPhrase(factArr);
-        var randomGetFactMessage = randomPhrase(this.t("GET_FACT_MESSAGE"))
+        const factArr = this.t('FACTS');
+        const factIndex = Math.floor(Math.random() * factArr.length);
+        const randomFact = factArr[factIndex];
 
         // Create speech output
-        var speechOutput = randomGetFactMessage + randomFact;
-        var repromptSpeech = randomPhrase(this.t("GET_REPROMPT_MESSAGE"));
-        this.emit(':askWithCard', speechOutput, repromptSpeech, this.t("SKILL_NAME"), randomFact)
+        const speechOutput = this.t('GET_FACT_MESSAGE') + randomFact;
+        this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), randomFact);
     },
-    'GetNewYearFactIntent': function () {
+     'GetNewYearFactIntent': function () {
         //TODO your code here
         var answerSlotValid = isAnswerSlotValid(this.event.request.intent);
         if(answerSlotValid){
@@ -85,29 +51,27 @@ var handlers = {
             this.emit('GetFact');
         }
     },
+    
     'AMAZON.HelpIntent': function () {
-        var speechOutput = this.t("HELP_MESSAGE");
-        var reprompt = this.t("HELP_MESSAGE");
+        const speechOutput = this.t('HELP_MESSAGE');
+        const reprompt = this.t('HELP_MESSAGE');
         this.emit(':ask', speechOutput, reprompt);
     },
     'AMAZON.CancelIntent': function () {
-        this.emit(':tell', this.t("STOP_MESSAGE"));
+        this.emit(':tell', this.t('STOP_MESSAGE'));
     },
     'AMAZON.StopIntent': function () {
-        this.emit(':tell', this.t("STOP_MESSAGE"));
-    }
+        this.emit(':tell', this.t('STOP_MESSAGE'));
+    },
 };
 
-function randomPhrase(phraseArr) {
-    // returns a random phrase
-    // where phraseArr is an array of string phrases
-    var i = 0;
-    i = Math.floor(Math.random() * phraseArr.length);
-    return (phraseArr[i]);
+exports.handler = function (event, context) {
+    const alexa = Alexa.handler(event, context);
+    alexa.APP_ID = APP_ID;
+    // To enable string internationalization (i18n) features, set a resources object.
+    alexa.resources = languageStrings;
+    alexa.registerHandlers(handlers);
+    alexa.execute();
 };
 
-function isAnswerSlotValid(intent) {
-    var answerSlotFilled = intent && intent.slots && intent.slots.FACT_YEAR && intent.slots.FACT_YEAR.value;
-    var answerSlotIsInt = answerSlotFilled && !isNaN(parseInt(intent.slots.FACT_YEAR.value));
-    return answerSlotIsInt;
-}
+   
