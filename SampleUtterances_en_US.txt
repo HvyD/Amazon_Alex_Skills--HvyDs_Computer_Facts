@@ -1,0 +1,14 @@
+GetNewFactIntent a fact
+GetNewFactIntent a Computer Science fact
+GetNewFactIntent tell me a fact
+GetNewFactIntent tell me a Computer Science fact
+GetNewFactIntent give me a fact
+GetNewFactIntent give me a computer Science fact
+GetNewFactIntent tell me trivia
+GetNewFactIntent tell me a Computer Science trivia
+GetNewFactIntent give me trivia
+GetNewFactIntent give me a Computer Science trivia
+GetNewFactIntent give me some information
+GetNewFactIntent give me some Computer Science information
+GetNewFactIntent tell me something
+GetNewFactIntent give me something
