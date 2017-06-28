@@ -23,14 +23,15 @@ const languageStrings = {
                     "The Apple One was released 1uly of 1976 for $666.66",
                     "Amazon began making the Echo and Alexa in 2010",
             ],
-            SKILL_NAME: 'Computer Facts',
-            GET_FACT_MESSAGE: "Here's your fact: ",
-            HELP_MESSAGE: 'You can say tell me a Computer fact, or, you can say exit... What can I help you with?',
-            HELP_REPROMPT: 'What can I help you with?',
-            STOP_MESSAGE: 'Goodbye!',
+             SKILL_NAME: "Hvy D Computer Facts",
+             GET_FACT_MESSAGE : GET_FACT_MSG_EN,
+             GET_REPROMPT_MESSAGE: GET_REPROMPT_MESSAGE_EN,
+             HELP_MESSAGE: "You can say tell me a fact, or, you can say exit... What can I help you with?",
+             HELP_REPROMPT: "What can I help you with?",
+             STOP_MESSAGE: "Goodbye!"
         
     
-    
+
     
             }  
             

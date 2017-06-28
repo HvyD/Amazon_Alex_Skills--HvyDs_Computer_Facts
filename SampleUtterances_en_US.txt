@@ -12,3 +12,18 @@ GetNewFactIntent give me some information
 GetNewFactIntent give me some Computer Science information
 GetNewFactIntent tell me something
 GetNewFactIntent give me something
+GetNewYearFactIntent tell me something for {FACT_YEAR}
+GetNewYearFactIntent i want to know something that happened in {FACT_YEAR}
+GetNewYearFactIntent give me a fact for {FACT_YEAR}
+GetNewYearFactIntent tell me a fact from {FACT_YEAR}
+GetNewYearFactIntent tell me something which occured in {FACT_YEAR}
+GetNewYearFactIntent tell me something from {FACT_YEAR}
+GetNewYearFactIntent give me a news from {FACT_YEAR}
+GetNewYearFactIntent give me a trivia from {FACT_YEAR}
+GetNewYearFactIntent give me more information from {FACT_YEAR}
+GetNewYearFactIntent tell me a new fact from {FACT_YEAR}
+GetNewYearFactIntent tell me an event from {FACT_YEAR}
+GetNewYearFactIntent tell me an event which occured in {FACT_YEAR}
+GetNewYearFactIntent i want to learn something from {FACT_YEAR}
+GetNewYearFactIntent i want to learn something that happened in {FACT_YEAR}
+GetNewYearFactIntent something new from {FACT_YEAR}
