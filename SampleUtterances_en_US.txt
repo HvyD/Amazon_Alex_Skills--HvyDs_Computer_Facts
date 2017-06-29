@@ -1,19 +1,20 @@
 GetNewFactIntent a fact
-GetNewFactIntent a Computer Science fact
+GetNewFactIntent a Computer fact
 GetNewFactIntent tell me a fact
-GetNewFactIntent tell me a Computer Science fact
+GetNewFactIntent tell me a Computer fact
 GetNewFactIntent give me a fact
-GetNewFactIntent give me a computer Science fact
+GetNewFactIntent give me a computer fact
 GetNewFactIntent tell me trivia
-GetNewFactIntent tell me a Computer Science trivia
+GetNewFactIntent tell me a Computer trivia
 GetNewFactIntent give me trivia
-GetNewFactIntent give me a Computer Science trivia
+GetNewFactIntent give me a Computer trivia
 GetNewFactIntent give me some information
-GetNewFactIntent give me some Computer Science information
+GetNewFactIntent give me some Computer information
 GetNewFactIntent tell me something
 GetNewFactIntent give me something
-GetNewYearFactIntent tell me something for {FACT_YEAR}
-GetNewYearFactIntent i want to know something that happened in {FACT_YEAR}
+GetNewFactIntent give me some Computer Facts
+GetNewYearFactIntent tell me a computer fact for {FACT_YEAR}
+GetNewYearFactIntent i want to know computer fact that happened in {FACT_YEAR}
 GetNewYearFactIntent give me a fact for {FACT_YEAR}
 GetNewYearFactIntent tell me a fact from {FACT_YEAR}
 GetNewYearFactIntent tell me something which occured in {FACT_YEAR}
