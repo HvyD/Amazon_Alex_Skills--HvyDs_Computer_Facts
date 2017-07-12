@@ -85,7 +85,7 @@ var handlers = {
         this.emit(':askWithCard', speechOutput, reprompt, cardTitle, cardContent);
     },
     'GetNewYearFactIntent': function () {
-        //TODO your code here
+        
         // get the year from the slots
         var year = this.event.request.intent.slots["FACT_YEAR"].value;
         var factArr = this.t('FACTS');
@@ -145,7 +145,7 @@ var handlers = {
         this.emit(':tell', this.t('STOP_MESSAGE'));
     },
     'SessionEndedRequest': function() {
-        this.emit(":tell", "Goodbye!");
+        this.emit(':tell', this.t('STOP_MESSAGE'));
     }
 
 };
@@ -169,7 +169,4 @@ function selectPhraseByYear(phraseArr, year) {
     }
     return null
 }
-
-
-
 
