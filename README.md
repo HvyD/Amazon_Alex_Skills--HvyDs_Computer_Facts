@@ -54,13 +54,5 @@ The test code is in four parts:  "Part 1", "Part 2", "Part 3", and "Starter Code
 ##### 5. Run the Starter Code on AWS Lambda
 * Deploy the starter code to verify that it works with your accounts in its simple form.   This is the same process you went through with the Space Geek Lab.  If you need a refresher, step-by-step instructions are provided in the classroom. 
 
-# Evaluation
+ 
 
-The starter code provides a simple fact skill similar to Space Geek, except a few AI history facts have been provided in an external file, `facts.js`, instead of the space facts.  Each fact includes a 4-digit year in its text, which we will use in the project for a new feature.  
-
-The project consists of three parts:
-1. Customize the fact skill
-2. Add a feature using an additional intent and a slot
-3. Add conversational elements
-
-Follow the instructions for each part as described in the classroom under "Tasks" for the project.  Once all the unit tests pass, follow the submission instructions to submit your project for review!
