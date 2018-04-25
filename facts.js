@@ -1,5 +1,4 @@
-// TODO Add more or replace entirely the facts below for your chosen history domain
-// Include at least 10 distinct facts with a 4-digit year included in the text for each
+
 module.exports = {
     "FACTS_EN": [
         "The field of AI is considered to have its origin in 1950, with publication of British mathematician Alan Turing's paper, Computing Machinery and Intelligence.",
