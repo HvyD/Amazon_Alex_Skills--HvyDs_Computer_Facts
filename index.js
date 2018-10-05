@@ -170,3 +170,4 @@ function selectPhraseByYear(phraseArr, year) {
     return null
 }
 
+
