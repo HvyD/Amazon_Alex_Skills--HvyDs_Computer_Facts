@@ -1,6 +1,6 @@
 # AMAZON Alexa Skill
 ### Trivia skill
-![Title](1464443113-997-Amazon-Inc-Alexa-Now-Makes-Its-Way-To-Your-Browser.jpg)
+![Title](image/1464443113-997-Amazon-Inc-Alexa-Now-Makes-Its-Way-To-Your-Browser.jpg)
 
 
 
